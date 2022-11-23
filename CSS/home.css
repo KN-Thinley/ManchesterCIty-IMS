@@ -17,6 +17,10 @@
       box-sizing: border-box;
       }
 
+  body{
+    background: conic-gradient(at 0% 50%, rgb(238, 110, 228) 10%, rgb(145, 75, 236) 30%, #51a1f2 50%);
+  }
+
  /* Navigation Bar */
 .navbar {
     width: 100%;
