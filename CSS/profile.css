@@ -16,7 +16,21 @@
         padding: 0;
         box-sizing: border-box;
         }
-  
+        h3{
+          color: white;
+          font-family: 'Agrandir Medium';
+        }
+     .card-text{
+      font-family: 'Agrandir Heavy';
+    }
+    h4{
+      color: white;
+      font-family: 'Agrandir Medium';
+    }
+  .card-footer p {
+    color: white;
+    font-family:'Agrandir Light';
+  }
    /*------------------------------------ Navigation Bar------------------------------------ */
   .navbar {
       background-color: #98c5e9; 
