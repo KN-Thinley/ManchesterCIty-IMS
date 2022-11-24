@@ -93,7 +93,6 @@
             </ul>
           </div>
       </div>
-
     </div>
   </nav>
 <br>
@@ -101,27 +100,26 @@
 
 <!-- article -->
 <article>
+  <h1 style="text-align:center; font-family:'Agrandir Heavy'; color:black;">Leave Application</h1>
+  <hr style="border-bottom:red 1px solid; width:50%; margin:20px auto;">
   <div class="testbox">
-    <form onSubmit="saveFile()">
-      <div class="banner">
-        <h1>Leave Application Form</h1>
-      </div>
+    <form onSubmit="saveFile()" class="form">
       <div class="item">
-        <p>Name<span class="required">*</span></p>
+        <p>Name:<span class="required">*</span></p>
         <input type="text" name="name" id="name" required/>
       </div>
       <div class="item">
-        <p>Start Date<span class="required">*</span></p>
+        <p>Start Date:<span class="required">*</span></p>
         <input type="date" name="start-date" id="start-date" required/>
         <i class="fas fa-calendar-alt"></i>
       </div>
       <div class="item">
-        <p>End Date<span class="required">*</span></p>
+        <p>End Date:<span class="required">*</span></p>
         <input type="date" name="end-date" id="end-date" required/>
         <i class="fas fa-calendar-alt"></i>
       </div>
            <label for="selector"> <!-- Can add label if want -->
-       <p>Application Type<span class="required">*</span></p>
+       <p>Application Type:<span class="required">*</span></p>
              <div class="item">
        <select id="selector"> <!-- Use "select" to create object -->
          <option value="2">Option</option> <!-- Add all applicable options -->
@@ -132,11 +130,11 @@
              </div>
      </label>
       <div class="item">
-        <p>Reason<span class="required">*</span></p>
+        <p>Reason:<span class="required">*</span></p>
         <textarea rows="3" id="reason" name="reason" required></textarea>
       </div>
-      <div class="btn-block">
-        <button type="submit" id="send">Send Application</button>
+      <div class="send-btn">
+        <a href="" class="btn btn-info hvr-bounce-to-bottom">Send</a>
       </div>
     </form>
     </div>

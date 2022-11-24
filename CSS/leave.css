@@ -1,14 +1,97 @@
 
-    h1 {
-    position: absolute;
-    margin: 0;
-    font-size: 32px;
-    color: #fff;
-    z-index: 2;
+    @font-face {
+      font-family: 'Agrandir Light';
+      src: url("../Font/Agrandir/Agrandir-GrandLight.otf");
+     }
+     @font-face {
+      font-family: 'Agrandir Medium';
+      src: url("../Font/Agrandir/Agrandir-TextBold.otf");
+     }
+     @font-face {
+      font-family: 'Agrandir Heavy';
+      src: url("../Font/Agrandir/Agrandir-GrandHeavy.otf");
+     }
+    
+     *{
+         margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          }
+          body{
+            font-family: 'Agrandir Light';
+            background:url('/Images/Background/main3.jpg');
+          }
+    
+     /* Navigation Bar */
+    .navbar {
+        background-color: #98c5e9; 
+        font-family: "Agrandir Medium";
+        font-size: 1.5rem;
     }
-    h5 {
-    margin: 10px 0;
+    .navbar .navbar-toggler{
+      border: none;
+      margin-bottom: 2rem;
     }
+    .navbar > .container-fluid{
+      display: flex;
+    }
+    .navbar img{
+        max-width: 90px;
+    }
+    .nav-brand{
+        font-family:'Quicksand', sans-serif;
+        color: white;
+        padding: 0.3em;
+    }
+    .navbar .navbar-nav .nav-link{
+        font-weight: 600;
+        font-size: 1.3em;
+    }
+    
+    .collapse ul> li > a{
+      text-decoration: none;
+      background-image: linear-gradient(95deg, red,blue);
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-size: 0% 3px;
+      transition: background-size 500ms ease-in-out;
+    }
+    .collapse ul> li > a:hover{
+      background-size: 100% 3px;
+      color: inherit;
+    }
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+    }
+    .dropdown .dropdown-menu{
+        background-color: #aeeafc;
+    
+    }
+    .dropend:hover .dropdown-menu{
+      position: absolute;
+      left: 11.7rem;
+      top: 0.2rem;
+      display:block;
+    }
+    
+    .dropdown ul> li > a{
+      text-decoration: none;
+      background-image: linear-gradient(95deg, red,blue);
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-size: 0% 3px;
+      transition: background-size 500ms ease-in-out;
+    }
+    .dropdown ul> li > a:hover{
+      
+      background:linear-gradient(95deg, rgb(157, 157, 255), rgb(75, 153, 255));
+      background-size: 100% 3px;
+      color: inherit;
+    }
+
+    /* Article */
+   
     .testbox {
     display: flex;
     justify-content: center;
@@ -16,7 +99,7 @@
     height: inherit;
     padding: 20px;
     }
-    form {
+    .form {
     width: 50%;
     padding: 20px;
     border-radius: 6px;
@@ -33,8 +116,6 @@
     .banner {
     position: relative;
     height: 210px;
-    background-image: url("../Images/backprofile.png");  
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,9 +128,14 @@
     width: 100%;
     height: 100%;
     }
+    form  p{
+      font-family: 'Agrandir Medium';
+      color: white;
+    }
     input, select, textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
+    color: white;
     border-radius: 3px;
     }
     input {
@@ -160,197 +246,29 @@
     input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:after {
     opacity: 1;
     }
-    .btn-block {
-    margin-top: 10px;
-    text-align: center;
+    a.btn{
+      width:100%;
+      padding: 1rem;
+      border-radius:0;
+      text-transform:uppercase;
+      color: white;
+      font-weight:bold;
+      font-family:'Agrandir Medium';
+      letter-spacing:4px;
+      font-size:1.1rem;
+    
     }
-    button {
-    width: 150px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px; 
-    background: #095484;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer;
-    }
-    button:hover {
-    background: #0666a3;
-    }
+    [class^="hvr-"] {margin: .4em;padding: 1em;text-transform: uppercase;cursor: pointer;border-top:4px solid white;text-decoration: none;-webkit-font-smoothing: antialiased;}
+    .hvr-bounce-to-bottom{display:inline-block;vertical-align:middle;-webkit-transform:perspective(1px) translateZ(0);transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;-webkit-transition-property:color;transition-property:color;-webkit-transition-duration:.5s;transition-duration:.5s}
+    .hvr-bounce-to-bottom:before{content:"";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:white;-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-transition-property:transform;transition-property:transform;-webkit-transition-duration:.5s;transition-duration:.5s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out}
+    .hvr-bounce-to-bottom:active,.hvr-bounce-to-bottom:focus,.hvr-bounce-to-bottom:hover{color:#1c1f23;}
+    .hvr-bounce-to-bottom:active:before,.hvr-bounce-to-bottom:focus:before,.hvr-bounce-to-bottom:hover:before{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transition-timing-function:cubic-bezier(.52,1.64,.37,.66);transition-timing-function:cubic-bezier(.52,1.64,.37,.66)}
+    
+    
+   
 
-    @font-face {
-        font-family: 'Agrandir Light';
-        src: url("../Font/Agrandir/Agrandir-GrandLight.otf");
-       }
-       @font-face {
-        font-family: 'Agrandir Medium';
-        src: url("../Font/Agrandir/Agrandir-TextBold.otf");
-       }
-       @font-face {
-        font-family: 'Agrandir Heavy';
-        src: url("../Font/Agrandir/Agrandir-GrandHeavy.otf");
-       }
-      
-       *{
-           margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            }
-            body{
-              background:url('/Images/Background/main3.jpg');
-            }
-      
-       /* Navigation Bar */
-      .navbar {
-          background-color: #98c5e9; 
-          font-family: "Agrandir Medium";
-          font-size: 1.5rem;
-      }
-      .navbar .navbar-toggler{
-        border: none;
-        margin-bottom: 2rem;
-      }
-      .navbar > .container-fluid{
-        display: flex;
-      }
-      .navbar img{
-          max-width: 90px;
-      }
-      .nav-brand{
-          font-family:'Quicksand', sans-serif;
-          color: white;
-          padding: 0.3em;
-      }
-      .navbar .navbar-nav .nav-link{
-          font-weight: 600;
-          font-size: 1.3em;
-      }
-      
-      .collapse ul> li > a{
-        text-decoration: none;
-        background-image: linear-gradient(95deg, red,blue);
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        background-size: 0% 3px;
-        transition: background-size 500ms ease-in-out;
-      }
-      .collapse ul> li > a:hover{
-        background-size: 100% 3px;
-        color: inherit;
-      }
-      .dropdown{
-          display: flex;
-          flex-direction: column;
-      }
-      .dropdown .dropdown-menu{
-          background-color: #aeeafc;
-      
-      }
-      .dropend:hover .dropdown-menu{
-        position: absolute;
-        left: 11.7rem;
-        top: 0.2rem;
-        display:block;
-      }
-      
-      .dropdown ul> li > a{
-        text-decoration: none;
-        background-image: linear-gradient(95deg, red,blue);
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        background-size: 0% 3px;
-        transition: background-size 500ms ease-in-out;
-      }
-      .dropdown ul> li > a:hover{
-        
-        background:linear-gradient(95deg, rgb(157, 157, 255), rgb(75, 153, 255));
-        background-size: 100% 3px;
-        color: inherit;
-      }
-      
-      /* article styling  */
-      
-      .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      
-      .container > fieldset {
-        border: 5px solid rgba(50,50,50,1);
-        margin: auto auto 20px;
-        max-width: 0;
-        padding: 20px 30px 30px;
-        transition: all 0.25s;
-      }
-      .container >.innerBody{
-       border:purple;
-      }
-      .container > .formContact{
-        background-color: #98c5e9;
-      }
-      .container > .formEvent{
-        background-color: #98c5e9;
-      }
-      .container > .formMessage{
-        background-color: #98c5e9;
-      }
-      
-      .container > fieldset:hover {border: 5px solid rgba(225,200,250,1);}
-      
-      .container > legend {
-        font-family: 'Merriweather Sans', sans-serif;
-        font-size: 24px;
-        font-weight: bold;
-        padding: 0 10px;
-      }
-      
-      .container > input, textarea {
-        border: none;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
-        font-weight: 300;
-        margin: 10px;
-        outline: rgba(200,200,200,1) solid 1px;
-        padding: 10px;
-        transition: all 0.25s;
-      }
-      
-      .container> .halfWidthInput {
-        width: 230px;
-      }
-      
-      .container > .fullWidthInput {
-        width: 500px;
-      }
-      
-      .container > input:focus, textarea:focus {
-        outline: rgba(225,200,250,1) solid 1px;
-        outline-offset: 0;
-      }
-      
-      .container > input[type="color"] {
-        height: 30px; width: 140px;
-      }
-      
-      .container > textarea {resize: vertical;}
-      
-      .container > input[type="submit"] {
-        background: rgba(50,50,50,1);
-        color: rgba(255,255,255,1);
-        outline: none;
-        min-width: 300px;
-      }
-      
-      .container > input[type="submit"]:hover {
-        background: rgba(0,0,0,1);
-      }
-      
-      .container > input[type="submit"]:focus {
-        background: rgba(200,100,200,1);
-      }
+  
+    
       /*------------------- footer ------------------------*/
       
       
@@ -485,9 +403,7 @@
        padding-top: 3rem;
        padding-right: 1rem;
       }
-      .news > button{
-        
-      }
+  
       @media (max-width:500px){
         .footer-logo{
           max-width: 100%;
