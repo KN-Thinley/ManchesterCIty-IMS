@@ -316,7 +316,7 @@ form > h3{
   @media screen and (max-width:920px){
     body{
       background: url(../Images/Background/page4.png);
-      background-size: auto 900px;
+      background-size: auto 100vh;
       background-repeat: no-repeat;
       background-position: center;
     }

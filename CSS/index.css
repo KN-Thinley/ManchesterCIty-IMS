@@ -161,7 +161,7 @@ article>h2{
   body{
     background: blue;
     background: url(../Images/Background/kdb.gif);
-    background-size: 100%;
+    background-size: auto 100vh;
     background-repeat: no-repeat;
   }
   img{
@@ -223,7 +223,7 @@ article>h2{
   body{
     background: blue;
     background: url(../Images/Background/kdb.gif);
-    background-size: 500px 700px;
+    background-size: auto 100vh;
     background-repeat: no-repeat;
   }
   img{
