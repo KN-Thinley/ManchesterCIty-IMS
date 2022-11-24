@@ -139,12 +139,15 @@
     margin-top: -90px;
 }
 .img-fluid{
+    border-radius: 12px;
     transition: box-shadow 1s linear;
     cursor:pointer;
+    width: 250px;
+
 }
 
 .img-fluid:hover{
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.76) 0px 10px 36px 0px, rgba(0, 0, 0, 0.46) 0px 0px 0px 1px;
 }
 /* button edits */
 .extent > .btn{  

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Application Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">    
+    <link rel="stylesheet" href="../CSS/leave.css">
+</head>
+<body>
+      <div class="testbox">
+      <form onSubmit="saveFile()">
+        <div class="banner">
+          <h1>Leave Application Form</h1>
+        </div>
+        <div class="item">
+          <p>Name<span class="required">*</span></p>
+          <input type="text" name="name" id="name" required/>
+        </div>
+        <div class="item">
+          <p>Start Date<span class="required">*</span></p>
+          <input type="date" name="start-date" id="start-date" required/>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="item">
+          <p>End Date<span class="required">*</span></p>
+          <input type="date" name="end-date" id="end-date" required/>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+             <label for="selector"> <!-- Can add label if want -->
+         <p>Application Type<span class="required">*</span></p>
+               <div class="item">
+         <select id="selector"> <!-- Use "select" to create object -->
+           <option value="2">Option</option> <!-- Add all applicable options -->
+           <option value="3">Medical</option>
+           <option value="1">Study</option> <!-- add selected to change default from first option -->
+           <option value="1">vacation</option> 
+        </select>
+               </div>
+       </label>
+        <div class="item">
+          <p>Reason<span class="required">*</span></p>
+          <textarea rows="3" id="reason" name="reason" required></textarea>
+        </div>
+        <div class="btn-block">
+          <button type="submit" id="send">Send Application</button>
+        </div>
+      </form>
+      </div>
+
+</body>
+</html>

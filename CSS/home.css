@@ -18,7 +18,7 @@
       }
 
   body{
-    background: conic-gradient(at 0% 50%, rgb(238, 110, 228) 10%, rgb(145, 75, 236) 30%, #51a1f2 50%);
+    background: url('../Images/Background/main3.jpg');
   }
 
  /* Navigation Bar */
@@ -101,11 +101,33 @@ html
   background: rgb(223,223,223);
 background: linear-gradient(90deg, rgba(223,223,223,1) 0%, rgba(244,244,244,1) 51%, rgba(223,223,223,1) 100%);
 }
-
-body 
-{
-  background-color:transparent;
+.newLogin{
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
+.newLogin > a{
+  text-decoration: none;
+  font-family: 'Agrandir Medium';
+  color: white;
+  background-color: #952184;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.26);
+}
+
+.newLogin >a:hover{
+  transition: 1s;
+  box-shadow: none;
+  color: white;
+}
+#loginLogo{
+  padding-left: 1rem;
+  height: 70px;
+  width: 70px;
+}
+
+
 
 h5
 {

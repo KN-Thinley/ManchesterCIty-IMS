@@ -75,13 +75,12 @@
   h3{
     color: rgb(0, 0, 0);
     font-family: 'Agrandir Heavy';
-    /* background: linear-gradient(135deg,rgb(0, 72, 255), rgb(0, 234, 255)); */
     padding-bottom: 0.5rem;
    display: flex;
    justify-content: center;
   }
   h3:hover{
-    transition: 2s;
+    transition: 4s;
     background: linear-gradient(135deg, rgb(0, 234, 255),rgb(0, 72, 255));
   }
 
@@ -242,6 +241,7 @@ p{
   }
   .submit{
     border: none;
+    background: transparent;
   }
   
   #logo{

@@ -16,6 +16,9 @@
       padding: 0;
       box-sizing: border-box;
       }
+      body{
+        background:url('/Images/Background/main3.jpg');
+      }
 
  /* Navigation Bar */
 .navbar {
@@ -85,7 +88,89 @@
   color: inherit;
 }
 
+/* article styling  */
 
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container > fieldset {
+  border: 5px solid rgba(50,50,50,1);
+  margin: auto auto 20px;
+  max-width: 0;
+  padding: 20px 30px 30px;
+  transition: all 0.25s;
+}
+.container >.innerBody{
+ border:purple;
+}
+.container > .formContact{
+  background-color: #98c5e9;
+}
+.container > .formEvent{
+  background-color: #98c5e9;
+}
+.container > .formMessage{
+  background-color: #98c5e9;
+}
+
+.container > fieldset:hover {border: 5px solid rgba(225,200,250,1);}
+
+.container > legend {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.container > input, textarea {
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px;
+  outline: rgba(200,200,200,1) solid 1px;
+  padding: 10px;
+  transition: all 0.25s;
+}
+
+.container> .halfWidthInput {
+  width: 230px;
+}
+
+.container > .fullWidthInput {
+  width: 500px;
+}
+
+.container > input:focus, textarea:focus {
+  outline: rgba(225,200,250,1) solid 1px;
+  outline-offset: 0;
+}
+
+.container > input[type="color"] {
+  height: 30px; width: 140px;
+}
+
+.container > textarea {resize: vertical;}
+
+.container > input[type="submit"] {
+  background: rgba(50,50,50,1);
+  color: rgba(255,255,255,1);
+  outline: none;
+  min-width: 300px;
+}
+
+.container > input[type="submit"]:hover {
+  background: rgba(0,0,0,1);
+}
+
+.container > input[type="submit"]:focus {
+  background: rgba(200,100,200,1);
+}
 /*------------------- footer ------------------------*/
 
 
@@ -155,7 +240,7 @@
   background:whitesmoke;
   transition:1s;
 }
-form{
+.footer-container > form{
   padding-bottom:15px ;
   display: flex;
   align-items: center;
@@ -164,18 +249,20 @@ form{
   margin-bottom: 50px;
 }
 
-form input{
+.footer-container > form input{
   width: 100%;
   background: transparent;
 }
 
-button{
+.footer-container > button{
   background: transparent;
   cursor: pointer;
 }
 .submit{
   border: none;
+  background: transparent;
 }
+
 
 #logo{
   width: 40px;
@@ -206,6 +293,10 @@ button{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.formcontents{
+  display: flex;
 }
 
 .footer-logo{
