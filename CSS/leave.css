@@ -104,7 +104,12 @@
     padding: 20px;
     border-radius: 6px;
     background:#952184;
-    box-shadow: 0 0 50px 0 #ffff; 
+    box-shadow: 0 0 50px 0 rgb(48, 47, 47); 
+    }
+    .form:hover{
+      transition: 1s;
+      transform: scale(1.1);
+      box-shadow: 0 0 50px 0 rgb(11, 11, 11); 
     }
 
     #start-date{
