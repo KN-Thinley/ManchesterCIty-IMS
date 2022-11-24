@@ -184,15 +184,6 @@
     padding: 10px;
     transition: all 0.25s;
   }
-  
-  .container> .halfWidthInput {
-    width: 230px;
-  }
-  
-  .container > .fullWidthInput {
-    width: 500px;
-  }
-
   .container > input::placeholder {
     text-align: center;
   } 
@@ -302,6 +293,8 @@ a.btn{
   .hvr-bounce-to-bottom:before{content:"";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:white;-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-transition-property:transform;transition-property:transform;-webkit-transition-duration:.5s;transition-duration:.5s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out}
   .hvr-bounce-to-bottom:active,.hvr-bounce-to-bottom:focus,.hvr-bounce-to-bottom:hover{color:#1c1f23;}
   .hvr-bounce-to-bottom:active:before,.hvr-bounce-to-bottom:focus:before,.hvr-bounce-to-bottom:hover:before{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transition-timing-function:cubic-bezier(.52,1.64,.37,.66);transition-timing-function:cubic-bezier(.52,1.64,.37,.66)}
+  
+  
   /*------------------- footer ------------------------*/
   
   
@@ -431,7 +424,14 @@ a.btn{
    padding-right: 1rem;
   }
   
-  @media (max-width:500px){
+  @media (max-width:550px){
+    .halfWidthInput {
+      width: 80%;
+   }
+   
+    .fullWidthInput {
+      width: 80%;
+   }
     .footer-logo{
       max-width: 100%;
     }
