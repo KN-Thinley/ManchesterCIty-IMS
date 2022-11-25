@@ -32,21 +32,25 @@
     <div class="login-page">
       <div class="form">
         <form class="login-form">
-          <label for="username">Username:</label>
-          <input type="text"/>
+          <label for="username" >Username:</label>
+          <input type="text" id="name">
+          <small></small>
 
           <label for="email">Email:</label>
           <input type="text" name="" id="email" placeholder="Enter your Email" onkeydown=";" required >
+          <small></small>
 
           <div class="password">
             <label for="password">Password:</label>
             <div class="passwordBtn">
               <input type="password" id="input">
+              <small></small>
               <i class="fa fa-eye-slash" id="show-btn" onclick="showPassword()"></i>
             </div>
           </div>
           
           <div class="retypePassword">
+            <small></small>
             <label for="retypePassword">Retype Password:</label>
             <div class="retypePasswordBtn">
               <input type="password" id="retypeInput"> 
@@ -54,9 +58,11 @@
             </div>
           </div>
 
-          <br><br>
+          <br>
+          <div class="sign_in">
+            <input type="submit" id="submitBtn">
+          </div>
           <div class="signup-btn">
-            <button class="custom-btn btn"><a href="signIn.html">Sign Up</a></button>
             <p class="message">Already have an account? <a href="signIn.html">Sign In</a></p>
           </div>
         </form>
@@ -64,6 +70,6 @@
     </div>
   </section>
  
-  <script src="../JS/signup.js"></script>
+  <script src="../JS/signIn.js"></script>
 </body>
 </html>
