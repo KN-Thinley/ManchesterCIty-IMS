@@ -31,28 +31,36 @@
     <!-- log in form register -->
     <div class="login-page">
       <div class="form">
-        <form class="login-form">
-          <label for="username">Username or Email:</label>
-          <input type="text"/>
+        <form class="login-form" >
+          <div class="email">
+            <label for="username"  class="form">Username or Email:</label>
+            <input type="text" id="email" placeholder="Enter Email Address">
+            <small class="erro"></small>
+          </div>
 
           <div class="password">
             <label for="password">Password:</label>
             <div class="passwordBtn">
               <input type="password" id="input">
               <i class="fa fa-eye-slash" id="show-btn" onclick="showPassword()"></i>
+              <small></small>
             </div>
             <p class="message"><a href="forgotPassword.html">Forgot Password?</a></p>
           </div>
           <br>
+          <div class="sign_in">
+            <input type="submit" id="submitBtn">
+          </div>
           <div class="signup-btn">
-            <button class="custom-btn btn"><a href="index.html" style="text-decoration:none; color: black;">Sign In</a></button>
-          <p class="message">Don't have an account? <a href="SignUp.html">Sign Up</a></p>
+            <p class="message">Don't have an account? <a href="SignUp.html">Sign Up</a></p>
           </div>
         </form>
       </div>
     </div>
   </section>
  
-  <script src="../JS/signup.js"></script>
+  <script src="../JS/signup.js">
+
+  </script>
 </body>
 </html>

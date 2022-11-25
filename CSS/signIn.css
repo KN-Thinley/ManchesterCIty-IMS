@@ -89,7 +89,7 @@ i{
 }
 
 /* syting login button */
-.custom-btn {
+.sign_in {
   width: 130px;
   height: 40px;
   border-radius: 5px;
@@ -105,6 +105,15 @@ i{
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
+}
+
+.sign_in{
+  width: 200px;
+  background: lightblue;
+}
+#submitBtn{
+  background: transparent;
+  border-bottom: none;
 }
 /* styling button with giving radial-gradient effect */
 .btn {
@@ -203,6 +212,16 @@ i{
 
 .form .signup-btn {
   text-align: center;
+}
+
+/* form validation */
+form small{
+  display: block;
+  color: white;
+}
+
+.passwordBtn>small{
+  display: block;
 }
 
 @media screen and (max-width:920px){
