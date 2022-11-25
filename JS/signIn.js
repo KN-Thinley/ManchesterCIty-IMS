@@ -70,7 +70,7 @@ const CheckPassword = () => {
         showError(formPassword,"Password cannot be blank.")
     }
     else if (!isPasswordSecure(text)){
-        showError(formPassword,`Invalid pasword`)
+        showError(formPassword,`Password must contain a Capital, lower, number and special key`)
     }
     else{
         showSuccess(formPassword)
