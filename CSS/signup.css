@@ -15,10 +15,9 @@
     background-repeat: no-repeat;
   }
   /* ------------styling the navbar and logo -----------*/
-  .sign_in{
-    width: 200px;
-    background: lightblue;
-  }
+form small {
+  color: #2b7cb3;
+}
   #submitBtn{
     background: transparent;
     border-bottom: none;

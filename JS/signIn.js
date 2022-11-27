@@ -1,7 +1,8 @@
 const form = document.querySelector(".login-form")
 const formEmail = document.querySelector("#email")
 const formPassword = document.querySelector("#input")
-const userName = document.querySelector('#name')
+const formretypePassword = document.querySelector("#retypeInput")
+const formUsername = document.querySelector("#username")
 
 const isRequired = (value) => value === "" ? true : false;
 const isBetween = (length,min,max) => length < min || length > max ? true : false;
@@ -19,12 +20,9 @@ const showSuccess = (input) => {
     const error = formField.querySelector("small");
 
     error.innerText = "";
-    input.style.borderColor = "#888888";
+    input.style.borderColor = "#Green";
 }
-const validName = (username) => {
-    const re = /^[A-Za-z\s]*$/
-    return re.test(username)
-}
+
 
 
 
@@ -79,36 +77,56 @@ const CheckPassword = () => {
     return valid;
 };
 
-function name(){
+const reCheckPassword = () => {
+    let valid = false;
+    const retype = formretypePassword.value.trim()
+    if(retype != formPassword.value.trim()){
+        showError(formretypePassword,"Passwords doesn't Match")
+    }
+    else {
+        showSuccess(formretypePassword)
+        valid = true
+    }
+    return valid;
+
+}
+
+
+function checkName(){
     let valid = false;
     const max = 25, min = 3;
 
-    const username = userName.value.trim();
+    const username = formUsername.value.trim();
 
     if(isRequired(username)){
-        displayError(userName, 'Username cannot be blank!')
+        showError(formUsername, 'Username cannot be blank!')
     }
-    else if(!isBetween(username.length, min, max)){
-        displayError(userName, `Username must be between ${min} and ${max}`)
+    else if(isBetween(username.length, min, max)){
+        showError(formUsername, `Username must be between ${min} and ${max}`)
     }
     else if(!validName(username)){
-        displayError(userName, 'Username cannot contain any numbers or special characters')
+        showError(formUsername, 'Username cannot contain any numbers or special characters')
     }
     else{
-        displaySuccess(userName);
+        showSuccess(formUsername);
         valid = true;
     }
     return valid
     
 }
+const validName = (username) => {
+    const re = /^[A-Za-z\s]*$/
+    return re.test(username)
+}
 
 form.addEventListener("submit",function (e) {
     console.log("E")
     e.preventDefault();
-
-    let check1 = CheckPassword()
-    let check2 = checkEmail()
-    let isFormValid = check1 && check2;
+    let check1 = checkName()
+    let check2 = CheckPassword()
+    let check3 = checkEmail()
+    let check4 = reCheckPassword()
+    let isFormValid = check1 && check2&& check3 &&check4;
 
     if(isFormValid){
         // resetForm()
@@ -117,6 +135,7 @@ form.addEventListener("submit",function (e) {
 });
 
 function resetForm(){
+    userName.value = ""
     password.value = "" 
     email.value = "" 
 }

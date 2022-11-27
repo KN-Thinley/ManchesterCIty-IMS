@@ -33,58 +33,12 @@ const form = document.querySelector(".login-form")
 const formEmail = document.querySelector("#email")
 const formPassword = document.querySelector("#input")
 
-// function emailChecker(){
-//     let valid = false
-//     const text = formEmail.value.trim()
-//     if(isRequired(text)){
-//         showError(formEmail,Email cannot be blank)
-//     }
-// }
-
-// form.addEventListener("submit",() => {
-//          var value = email.value;
-
-//     var pattern = /^[^]+@[^]+\.[a-z]{2,3}$/;
-    
-//      if(pattern.test(value)){
-//       form.classlist.add("valid")
-//       form.classlist.remove("invalid")
-//       text.innerHTML = "Your email address is valid"
-//       text.style.color ="#00ff00";
-//     }
-//     else{
-//       form.classlist.remove("valid")
-//       form.classlist.add("invalid")
-//       text.innerHTML = "Please Enter your Valid Email Adress"
-//       text.style.color ="#ff0000";
-// }})    
-// function validation(){
-   
-//     var email = document.getElementById("email").value;
-//     var text = document.getAnimations("text");
-//     var pattern = /^[^]+@[^]+\.[a-z]{2,3}$/;
-    
-
-//     if(email.match(pattern)){
-//       form.classlist.add("valid")
-//       form.classlist.remove("invalid")
-//       text.innerHTML = "Your email address is valid"
-//       text.style.color ="#00ff00";
-//     }
-//     else{
-//       form.classlist.remove("valid")
-//       form.classlist.add("invalid")
-//       text.innerHTML = "Please Enter your Valid Email Adress"
-//       text.style.color ="#ff0000";
-//     }
-//   }
 
 
 // Message
 const showError = (input,message) => {
     const formField = input.parentElement;
     const error = formField.querySelector("small");
-
     error.innerText = message;
     input.style.borderColor = "Red";
 }
@@ -94,7 +48,7 @@ const showSuccess = (input) => {
     const error = formField.querySelector("small");
 
     error.innerText = "";
-    input.style.borderColor = "#888888";
+    input.style.borderColor = "#Green";
 }
 
 
@@ -154,9 +108,10 @@ form.addEventListener("submit",function (e) {
     console.log("E")
     e.preventDefault();
 
-    let check1 = CheckPassword()
-    let check2 = checkEmail()
-    let isFormValid = check1 && check2;
+    // let check1 = checkName()
+    let check2 = CheckPassword()
+    let check3 = checkEmail()
+    let isFormValid = check2 && check3;
 
     if(isFormValid){
         // resetForm()
@@ -165,6 +120,7 @@ form.addEventListener("submit",function (e) {
 });
 
 function resetForm(){
+    username.value = ""
     password.value = "" 
     email.value = "" 
 }

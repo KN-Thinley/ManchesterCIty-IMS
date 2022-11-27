@@ -89,7 +89,7 @@ i{
 }
 
 /* syting login button */
-.sign_in {
+.custom-btn {
   width: 130px;
   height: 40px;
   border-radius: 5px;
@@ -107,10 +107,6 @@ i{
   outline: none;
 }
 
-.sign_in{
-  width: 200px;
-  background: lightblue;
-}
 #submitBtn{
   background: transparent;
   border-bottom: none;
@@ -217,7 +213,7 @@ i{
 /* form validation */
 form small{
   display: block;
-  color: white;
+  color: rgb(0, 157, 255);
 }
 
 .passwordBtn>small{

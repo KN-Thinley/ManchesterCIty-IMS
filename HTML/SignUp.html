@@ -32,13 +32,17 @@
     <div class="login-page">
       <div class="form">
         <form class="login-form">
-          <label for="username" >Username:</label>
-          <input type="text" id="name">
+         <div class="name">
+          <label for="username">Username:</label>
+          <input type="text" id="username" placeholder="Enter your name"  onkeydown=";">
           <small></small>
+         </div>
 
-          <label for="email">Email:</label>
-          <input type="text" name="" id="email" placeholder="Enter your Email" onkeydown=";" required >
+          <div class="email">
+            <label for="email">Email:</label>
+          <input type="text" name="" id="email" placeholder="Enter your Email" onkeydown=";"  >
           <small></small>
+          </div>
 
           <div class="password">
             <label for="password">Password:</label>
@@ -54,15 +58,17 @@
             <label for="retypePassword">Retype Password:</label>
             <div class="retypePasswordBtn">
               <input type="password" id="retypeInput"> 
+              <small></small>
               <i class="fa fa-eye-slash fa2" id="show-btn" onclick="showRetypePassword()"></i>
             </div>
           </div>
 
           <br>
           <div class="sign_in">
-            <input type="submit" id="submitBtn">
+            
           </div>
           <div class="signup-btn">
+            <button class="custom-btn btn" type="submit">Sign Up</button>
             <p class="message">Already have an account? <a href="signIn.html">Sign In</a></p>
           </div>
         </form>
@@ -71,5 +77,6 @@
   </section>
  
   <script src="../JS/signIn.js"></script>
+  <script src="../JS/resetPassword.js"></script>
 </body>
 </html>
