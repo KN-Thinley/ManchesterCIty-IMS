@@ -72,3 +72,16 @@ form.addEventListener("submit", function (e){
     }
 
 });
+form.addEventListener("input", debounce(function(e){
+    switch(e.target.id){
+        case 'input':
+            CheckPassword()
+            break;
+        case 'retypeInput':
+            reCheckPassword()
+            break;
+        default:
+            break;
+        
+    }
+}))

@@ -107,16 +107,19 @@
       <div class="item">
         <p>Name:<span class="required">*</span></p>
         <input type="text" name="name" id="name" required/>
+        <small></small>
       </div>
       <div class="item">
         <p>Start Date:<span class="required">*</span></p>
-        <input type="date" name="start-date" id="start-date" required/>
+        <input type="date" name="start-date" id="start-date" required="required" style="color: black;"/>
         <i class="fas fa-calendar-alt"></i>
+        <small></small>
       </div>
       <div class="item">
         <p>End Date:<span class="required">*</span></p>
         <input type="date" name="end-date" id="end-date" required/>
         <i class="fas fa-calendar-alt"></i>
+        <small></small>
       </div>
            <label for="selector"> <!-- Can add label if want -->
        <p>Application Type:<span class="required">*</span></p>
@@ -126,15 +129,17 @@
          <option value="3">Medical</option>
          <option value="1">Study</option> <!-- add selected to change default from first option -->
          <option value="1">vacation</option> 
+         <small></small>
       </select>
              </div>
      </label>
       <div class="item">
         <p>Reason:<span class="required">*</span></p>
-        <textarea rows="3" id="reason" name="reason" required></textarea>
+        <textarea rows="3" id="reason" name="reason" required="required" style="color: black;"></textarea>
+        <small></small>
       </div>
       <div class="send-btn">
-        <a href="" class="btn btn-info hvr-bounce-to-bottom">Send</a>
+        <button type="submit" class="btn btn-info hvr-bounce-to-bottom">Send</button>
       </div>
     </form>
     </div>
@@ -220,6 +225,7 @@
 </footer>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script src="../JS/leave.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>

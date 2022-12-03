@@ -106,20 +106,20 @@
   <form>
       <fieldset class="formContact">
           <legend>Players Information</legend>
-          <input class="halfWidthInput" type="text" name="name" placeholder="NAME"><input class="halfWidthInput" type="tel" name="phone" placeholder="PHONE">
-          <input class="fullWidthInput" type="email" name="email" placeholder="EMAIL">
+          <input class="halfWidthInput" type="text" name="name" placeholder="NAME"><input class="halfWidthInput" type="tel" name="phone" placeholder="PHONE" required>
+          <input class="fullWidthInput" type="email" name="email" placeholder="EMAIL" required>
       </fieldset>
       <fieldset class="formEvent">
           <legend>Details</legend>
-          <input class="halfWidthInput" type="date" name="date">
-          <input class="fullWidthInput" type="text" name="location" placeholder="LOCATION">
+          <input class="halfWidthInput" type="date" name="date" required>
+          <input class="fullWidthInput" type="text" name="location" placeholder="LOCATION" required>
       </fieldset>
       <fieldset class="formMessage">
           <legend>Reasons</legend>
-          <textarea class="fullWidthInput" type="text" name="message" placeholder="MESSAGE"></textarea>
+          <textarea class="fullWidthInput" type="text" name="message" placeholder="MESSAGE" required></textarea>
       </fieldset>
       <div class="send-btn">
-        <a href="" class="btn btn-info hvr-bounce-to-bottom">Send</a>
+        <button type="submit" class="btn btn-info hvr-bounce-to-bottom">Send</button>
       </div>
   </form>
   <br>

@@ -48,7 +48,7 @@ const showSuccess = (input) => {
     const error = formField.querySelector("small");
 
     error.innerText = "";
-    input.style.borderColor = "#Green";
+    input.style.borderColor = "Green";
 }
 
 
@@ -124,3 +124,33 @@ function resetForm(){
     password.value = "" 
     email.value = "" 
 }
+
+const debounce = (fn, delay = 500) => {
+    let timeoutId;
+     return(...args) => {
+        //cancel the previous timer
+        if(timeoutId){
+            clearTimeout(timeoutId)
+        }
+        //setup a new timer 
+        timeoutId = setTimeout(() => {
+            fn.apply(null,args)
+        }, delay)
+     }
+}
+
+form.addEventListener("input", debounce(function(e){
+    switch(e.target.id){
+        
+        case 'email':
+            checkEmail()
+            break;
+        case 'input':
+            CheckPassword()
+            break;
+        default:
+            break;
+        
+    }
+}))
+

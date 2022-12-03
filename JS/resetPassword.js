@@ -27,3 +27,19 @@ function showRetypePassword(){
         btn.classList.add('fa-eye-slash')
     }
 }
+
+// instant feedback
+const debounce = (fn, delay = 500) => {
+    let timeoutId;
+     return(...args) => {
+        //cancel the previous timer
+        if(timeoutId){
+            clearTimeout(timeoutId)
+        }
+        //setup a new timer 
+        timeoutId = setTimeout(() => {
+            fn.apply(null,args)
+        }, delay)
+     }
+}
+

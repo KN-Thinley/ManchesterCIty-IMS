@@ -53,4 +53,29 @@ form.addEventListener("submit", function(e) {
         window.location.assign("../HTML/OTP.html")
     }
 });
+// instant feedback
+const debounce = (fn, delay = 500) => {
+    let timeoutId;
+     return(...args) => {
+        //cancel the previous timer
+        if(timeoutId){
+            clearTimeout(timeoutId)
+        }
+        //setup a new timer 
+        timeoutId = setTimeout(() => {
+            fn.apply(null,args)
+        }, delay)
+     }
+}
+
+form.addEventListener("input", debounce(function(e){
+    switch(e.target.id){
+        case 'email':
+            checkEmail()
+            break;
+        default:
+            break;
+        
+    }
+}))
 
